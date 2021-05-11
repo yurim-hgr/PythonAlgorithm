@@ -13,4 +13,4 @@ git add .
 git commit -m 'test'
 
 ### 깃 저장소에 올리기
-git push -u origin master
+git push -u origin main
