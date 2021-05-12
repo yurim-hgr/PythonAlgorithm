@@ -24,7 +24,8 @@ failed to push some refs to~~
 
 3 )커밋, 푸시하기 
 
-# 깃 상태 보기 
+### 깃 상태 보기 
 git status 
+
 git log 
 
