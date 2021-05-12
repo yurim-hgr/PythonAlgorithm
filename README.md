@@ -17,4 +17,14 @@ git push -u origin main
 
 ### 깃 충돌 
 failed to push some refs to~~ 
-git pull origin
+1 ) git pull origin
+
+2) cat 충돌파일
+충돌파일에서 merge한다 >>head 같은 코드 삭제 
+
+3 )커밋, 푸시하기 
+
+# 깃 상태 보기 
+git status 
+git log 
+
