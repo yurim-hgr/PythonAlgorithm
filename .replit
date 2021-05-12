@@ -1,2 +1,2 @@
 language = "python"
-run = "python codeup/*.py"
+run = "python codeup/ex2.py"

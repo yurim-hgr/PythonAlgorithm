@@ -7,11 +7,18 @@
 #n = input()
 #a=ord(input())
  
-b= int (input(), 16)
-#print (b)
-for j in range(1, 16) :
+#6085 : [기초-종합] 그림 파일 저장용량 계산하기(py)
 
-    print( '%X'%b ,'*', '%X'%j ,'=' ,'%X'%(b*j) , sep='')
+w,h, b= input().split()
+w = int(w)
+h = int(h)
+b = int(b)
+a = w*h*b/8/1024/1024
+ 
+print('%.2f'%a , 'MB' , end = ' ')
+    
+  
+    
     
 
 # n =
