@@ -14,3 +14,7 @@ git commit -m 'test'
 
 ### 깃 저장소에 올리기
 git push -u origin main
+
+### 깃 충돌 
+failed to push some refs to~~ 
+git pull origin
