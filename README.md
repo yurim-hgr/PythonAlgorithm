@@ -23,7 +23,7 @@ failed to push some refs to~~
 2) cat 충돌파일
 충돌파일에서 merge한다 >>head 같은 코드 삭제 
 
-3)커밋, 푸시하기 
+3) 커밋, 푸시하기 
 
 ### 깃 상태 보기 
 git status 
