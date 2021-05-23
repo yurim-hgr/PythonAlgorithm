@@ -1,3 +1,62 @@
+#백준 그리디 - 동전 0
+
+n, k = map(int ,input().split())
+array = []
+for i in range (n) :
+  a = int(input())
+  array.append(a)
+
+#print(array)
+array.sort(reverse=True)
+
+count = 0
+for coin in array :
+  count = count + k // coin 
+  k = k % coin 
+print(count)
+
+#6096 : [기초-리스트] 바둑알 십자 뒤집기(py)-> 푸는중임
+d= []
+for i in range(20):
+  d.append([])
+  for j in range(20):
+    d[i].append(0)
+  
+n = int(input())
+for i in range(n):
+  x,y =  input().split()
+for j in range(1, 20):
+  if d[int(j)][int(y)] == 1:
+     d[int(j)][int(y)] == 0
+  else:
+     d[int(j)][int(y)] == 1
+
+  if d[int(x)][int(j)] == 1:
+     d[int(x)][int(j)] = 0
+  else:
+    d[int(x)][int(j)] == 1
+    print(d[i][j], end = ' ')
+  print()
+
+
+#6095 : [기초-리스트] 바둑판에 흰 돌 놓기(설명)(py)
+d= []
+for i in range(20):
+  d.append([])
+  for j in range(20):
+    d[i].append(0)
+  
+n = int(input())
+for i in range(n):
+  x,y =  input().split()
+  d[int(x)][int(y)] = 1
+
+
+for i in range(1, 20):
+  for j in range(1, 20):
+    print (d[i][j], end = ' ')
+  print()
+
 
 
 #6094 : [기초-리스트] 이상한 출석 번호 부르기3(py)

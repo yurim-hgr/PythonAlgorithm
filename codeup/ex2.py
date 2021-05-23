@@ -6,14 +6,22 @@
 #n = input()
 #a=ord(input())
 
-#6093 : [기초-리스트] 이상한 출석 번호 부르기2(py)
-n = int(input())      #개수를 입력받아 n에 정수로 저장
-a = input().split()  #공백을 기준으로 잘라 a에 순서대로 저장
+#백준 그리디 - 동전 0
 
-for i in range(n-1 , -1 , -1) :  #0부터 n-1까지...
-  a[i] = int(a[i])       #a에 순서대로 저장되어있는 각 값을 정수로 변환해 다시 저장
-  print(a[i], end=' ')
-    
+n, k = map(int ,input().split())
+array = []
+for i in range (n) :
+  a = int(input())
+  array.append(a)
+
+#print(array)
+array.sort(reverse=True)
+
+count = 0
+for coin in array :
+  count = count + k // coin 
+  k = k % coin 
+print(count)
 
 #for i in range(n+1, -1 , -1) :  #카운트한 값을 공백을 두고 출력
  #print(a[i], end=' ')
