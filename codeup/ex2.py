@@ -6,22 +6,20 @@
 #n = input()
 #a=ord(input())
 
-#백준 그리디 - 동전 0
+#책(이코테) 그리디 - 더하기 혹은 곱하기 
 
-n, k = map(int ,input().split())
-array = []
-for i in range (n) :
-  a = int(input())
-  array.append(a)
+s = input()
+result = 0
 
-#print(array)
-array.sort(reverse=True)
+for i in range (len(s)) :
+  num = int(s[i])
+  if num <= 1 or result <= 1:
+    result = result + num
 
-count = 0
-for coin in array :
-  count = count + k // coin 
-  k = k % coin 
-print(count)
+  else :
+    result = result * num
+
+print(result)
 
 #for i in range(n+1, -1 , -1) :  #카운트한 값을 공백을 두고 출력
  #print(a[i], end=' ')

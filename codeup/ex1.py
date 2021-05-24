@@ -1,4 +1,20 @@
-#백준 그리디 - 동전 0
+
+#책(이코테) 그리디 - 더하기 혹은 곱하기 (그리디:2문제)
+
+s = input()
+result = 0
+
+for i in range (len(s)) :
+  num = int(s[i])
+  if num <= 1 or result <= 1:
+    result = result + num
+
+  else :
+    result = result * num
+
+print(result)
+
+#백준 그리디 - 동전 0 (그리디:1문제)
 
 n, k = map(int ,input().split())
 array = []
