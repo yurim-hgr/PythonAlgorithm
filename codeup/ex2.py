@@ -7,32 +7,35 @@
 #n = input()
 #a=ord(input())
 
-#6097 : [기초-리스트] 설탕과자 뽑기(py)
-h , w = map(int, input().split())
-data= []
-for i in range(h+1):
-  data.append([])
-  for j in range(w+1): 
-    data[i].append(0)
 
-n = int(input())
-for i in range(n):
-  l,d,x,y = input().split()
-  l = int(l)
-  d = int(d)
-  x = int(x)
-  y = int(y)
-  for j in range(l):
-    if d== 0 :      
-      data[x][y+j]=1
-    else :
-      data[x+j][y] = 1
-      
-for i in range(1,h+1):
-  for j in range(1, w+1):
-    print(data[i][j], end= ' ')
-  print()
+#6098 : [기초-리스트] 성실한 개미(py)
+board = []
+x = 1
+y = 1
 
+# 2차배열 input
+for i in range(10):
+    temp = list(map(int,input().split()))
+    board.append(temp)
+    
+while True:
+    if board[x][y] == 2: #먹이를 발견했을때
+        board[x][y] = 9
+        break
+    elif board[x+1][y] == 1 and board[x][y+1] == 1: #가로막혔을때
+        board[x][y] = 9
+        break
+    board[x][y] = 9
+    if board[x][y+1] == 1: # 오른쪽이 벽이면 아래로 1칸
+        x += 1
+    elif board[x+1][y] == 1: # 아래쪽이 벽이면 오른쪽으로 1칸
+        y += 1
+    else: y += 1 # 주변에 벽이 없으면 오른쪽으로 1칸
+
+for a in board:
+    for b in a:
+        print(b,end=' ')
+    print()
 
 #for i in range(n+1, -1 , -1) :  #카운트한 값을 공백을 두고 출력
  #print(a[i], end=' ')
